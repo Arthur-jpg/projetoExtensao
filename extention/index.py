@@ -3,6 +3,7 @@ from sharpe import calculoPrivados
 from sharpe import calculoPublico
 import numpy as np
 from tqdm import tqdm
+from time import sleep
 
-for i in range(0, 10, 1):
-    print(i)
+for i in tqdm(calculoPrivados):
+    sleep(0.0001)
