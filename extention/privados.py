@@ -1,8 +1,10 @@
+# pandas foi importado para importar os dados do arquivo .csv
 import pandas as pd
+# statistics foi importado para fazer contas de média e desvio padrão
 import statistics
-import numpy as np
+# SciPy foi importado para fazer a conta de correlação de pearson
 import scipy.stats as stats
-import matplotlib.pyplot as plt
+
 
 
 # o endereço do arquivo principal dos dados coletados foi posto dentro de uma vriaval
@@ -86,7 +88,7 @@ def contaMenores():
     # foi criado uma lista para que para guardar os coeficientes de cada um dos ativos
     coeficientes = []
 
-    # foi criado variaveis para guardar cada coeficiente de variação de cada ativo
+    # foram criado variaveis para guardar cada coeficiente de variação de cada ativo
     # como o segundo item exportado das funções foram os coeficientes de variação foi usado o index [1] para ter acesso a esse dado
     Citsa24 = Itsa24()[1]
     Ctaee26 = Taee26()[1]
