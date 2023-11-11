@@ -57,7 +57,7 @@ def main():
     ativo1 = escolherMenor()[2]
     ativo2 = escolherMenor()[3]
 
-    print(f'O índice de sharp deu igual a {round(sharpe, 5)}')
+    print(f'O índice de sharp dos ativos de natureza privada foi de: {round(sharpe, 5)}')
     print(f'O primeiro ativo {ativo1} com {round(100* alocacao, 2)}% de alocação')
     print(f'O segundo ativo {ativo2} com alocação de {round(100*(1-alocacao), 2)}%')
 
@@ -69,15 +69,15 @@ def main():
     ativo10 = escolherMenorp()[2]
     ativo20 = escolherMenorp()[3]
     print('-----------------------------------------------')
-    print(f'O índice de sharp deu igual a {round(sharpe2, 5)}')
+    print(f'O índice de sharp dos ativos de natureza pública {round(sharpe2, 5)}')
     print(f'O primeiro ativo {ativo10} com {round(100* alocacao2, 2)}% de alocação')
     print(f'O segundo ativo {ativo20} com alocação de {round(100*(1-alocacao2), 2)}%')
     
     
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
 
 
 

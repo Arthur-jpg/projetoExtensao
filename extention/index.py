@@ -5,5 +5,6 @@ import numpy as np
 from tqdm import tqdm
 from time import sleep
 
-for i in tqdm(calculoPrivados):
-    sleep(0.0001)
+
+def mainPricipal():
+    

@@ -28,5 +28,3 @@ def main():
     comp3()
     comp2()
 
-if __name__ == "__main__":
-    main()
