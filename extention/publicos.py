@@ -35,8 +35,17 @@ def Selic2026():
     # foi calculado o coeficiente de variação com a formula que foi ensidada 
     coefVar = desvPad/media
     
+    # para importar o preço único foi o mesmo processo da importação dos redimentos diários
+    pu = planilha['puSelic26'].str.replace(',', '.')
+
+    # para poder usar esses dados foi necessário transforma-los em float
+    pu = pu.astype(float)
+
+    # a rentabilidade foi calculada com a diferença entre o preço final e o preço incial em termos percentuais
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0]
+
     #  todos os dados calculados foram exportados com o 'return' para poderem ser usados em outras funções
-    return media, coefVar, desvPad, Selic2026
+    return media, coefVar, desvPad, Selic2026, rentabilidade
 
 
 
@@ -49,8 +58,11 @@ def Selic2028():
     Selic2028 = Selic2028.astype(float)
     media = statistics.mean(Selic2028)
     desvPad = statistics.stdev(Selic2028)
-    coefVar = desvPad/media 
-    return media, coefVar, desvPad, Selic2028
+    coefVar = desvPad/media
+    pu = planilha['puSelic28'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Selic2028, rentabilidade
 
 
 
@@ -60,7 +72,12 @@ def Pre2024Primeiro():
     media = statistics.mean(Pre2024Primeiro)
     desvPad = statistics.stdev(Pre2024Primeiro)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Pre2024Primeiro
+    pu = planilha['pu24p'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Pre2024Primeiro, rentabilidade
+
+
 
 def Pre2024Segundo():
     Pre2024Segundo = planilha['Pre2024Segundo'].str.replace(',', '.')
@@ -68,7 +85,10 @@ def Pre2024Segundo():
     media = statistics.mean(Pre2024Segundo)
     desvPad = statistics.stdev(Pre2024Segundo)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Pre2024Segundo
+    pu = planilha['pu24s'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Pre2024Segundo, rentabilidade
 
 
 def Ipca2026():
@@ -77,7 +97,13 @@ def Ipca2026():
     media = statistics.mean(Ipca2026)
     desvPad = statistics.stdev(Ipca2026)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Ipca2026
+    pu = planilha['puIpca26'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    print(rentabilidade)
+    return media, coefVar, desvPad, Ipca2026, rentabilidade
+
+
 
 
 # a função contaMenores() foi usada para localizar os dois menores coeficientes de variação entre os ativos selecionados
