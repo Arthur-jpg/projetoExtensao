@@ -134,42 +134,52 @@ def escolherMenor():
 
     # assim foi possível que novas variáveis fossem criadas para guardar os valores dos nomes e das funções dos dois menores coeficientes
 
-    # a variavel m e n foram 
+    # a variavel m e n foram criadas para acessar as funções que estão no index[0] que correspondem aos dois menores coeficientes
     m = dic[menor][0]
     sm = dic[segundoMenor][0]
 
+    # a variavel nome1 e nome3 foram criadas para acessar os nomes dos ativos que estão no index[1] que correspondem aos dois menores coeficientes
     nome1 = dic[menor][1]
     nome2 = dic[segundoMenor][1]
 
-
+    # as variáveis foram exportadas com 'return' para serem usadas em outras funções
     return m, sm, nome1, nome2
 
 
 
 
 def dadosSharp():
-
+    # froam criadas as variáveis ativo1 e ativo2 para guardarem a função dos ativos selecionados com os menores coeficientes de variação
     ativo1 = escolherMenor()[0]
     ativo2 = escolherMenor()[1]
 
+    # foram criadas as variáveis mediaativo1 e mediaativo2 para guardarem as médias dos ativos 1 e 2
+    # como ativo1 e ativo2 são funções, as médias foram buscadas com o index[0], sendo o primeiro elemento exportado de cada função a média do ativo
     mediaativo1 = ativo1[0]
     mediaativo2 = ativo2[0]
 
     
-
+    # foram criadas as variáveis desvPadativo1 e desvPadativo2 para guardarem os desvios padrão dos ativos 1 e 2
+    # como ativo1 e ativo2 são funções, os desvios padrão foram buscadas com o index[2], sendo o terceiro elemento exportado de cada função o desvio padrão do ativo
     desvPadativo1 = ativo1[2]
     desvPadativo2 = ativo2[2]
 
+    # foram criadas as variáveis varativo1 e varativo2 para guardarem as variâncias dos ativos 1 e 2
+    # como a variância é o quadrado do desvio padrão, foi feito isso para cada um dos dados
     varativo1 = desvPadativo1**2
     varativo2 = desvPadativo2**2
 
+    # foi calculada a correlação dos ativos com a biblioteca SciPy que calcula a correlação de perarson. Como o resultado dessa função é um objeto, foi feita a procura do
+    # dado que era necessário, assim o novo valor da variável correl foi setado para o index[0], ou seja, o primeiro elemento do resultado da conta de pearson
     correl = stats.pearsonr(ativo1[3], ativo2[3])
     correl = correl[0]
     
+    # a covariância foi calculada de acordo com a fórmula fornecida pelo professor
     covar = desvPadativo1*desvPadativo2*correl
     
-
-    reff = ativo1[0]
+    # a refencia de ativo livre de risco (reff) foi a média dos retornos diários do CDI e como o CDB replica o CDI, a média do mesmo foi usada
+    reff = cdb1()[0]
     
+    # os devidos dados necessários para o sharpe foram exportados para serem usados em outras funções
     return mediaativo1, mediaativo2, desvPadativo1, desvPadativo2, varativo1, varativo2, correl, covar, reff
 
