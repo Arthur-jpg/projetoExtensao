@@ -3,7 +3,7 @@ import time
 from rentabilidade import rentabilidadeGeral, carteiraPrivada, carteiraPublica
 from graficos import main2
 from beta import betaPrivado, betaPublico, betaTotal
-
+from treynor import treynor
 
 while True:
     try:
@@ -99,7 +99,10 @@ def beta():
     else:
         print('Algo deu errado')
 
-def 
+def Treynor():
+    treynorr = treynor()
+    
+    
 
 def grafico():
     main2()
