@@ -64,11 +64,18 @@ def cdiCarteiraTotal():
 
 
 
-def main():
+def main2():
+    print('GRÁFICOS')
+    print()
+    print('Gráfico Ibov')   
     ibov()
+    print('Ibov vs Carteira Total')    
     ibovCarteiraT()
+    print('CDI vs Carteira Total')
     cdiCarteiraTotal()
+    print('Ibov vs Carteira Privada')
     ibovPrivado()
+    print('Ibov vs Privado')
     ibovPrivado()
+    
 
-main()

@@ -131,13 +131,9 @@ def variaveis():
     alocacaoAt10 = alocacao2
     alocacaoAt20 = 1 - alocacao2
 
-    return alocacaoAt1, alocacaoAt2, alocacaoAt10, alocacaoAt20
+    return alocacaoAt1, alocacaoAt2, alocacaoAt10, alocacaoAt20, sharpe, sharpe2, ativo1, ativo2, ativo10, ativo20, alocacao, alocacao2
 
 
-
-
-
-variaveis()
 
 
   

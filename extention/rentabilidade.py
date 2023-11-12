@@ -47,7 +47,7 @@ def carteiraPublica():
     rendimentoDiario = rdiario1*pAt1 + rdiario2*pAt2
     rentabilidadeG2 = rentabilidade1*pAt1 + rentabilidade2*pAt2
 
-    return rentabilidade1, rentabilidade2, rentabilidadeG2, rendimentoDiario
+    return rentabilidade1, rentabilidade2, rentabilidadeG2, rendimentoDiario, pAt1, pAt2
 
 
 
@@ -66,10 +66,6 @@ def rentabilidadeGeral():
     geral = (rentPublica+rentPrivada)/2
 
 
-
-    # print(f'Rentabilidade Carteira Privada {round(carteiraPrivada()[2]*100, 2)}%')
-    # print(f'Rentabilidade Carteira Pública {round(carteiraPublica()[2]*100,2)}%')
-    # print(f'Rentabilidade geral da Carteira {round(geral*100, 2)}%')
 
     return geral, rendimentoDiarioPublico, rendimentoDiarioPrivado, rendimentoToalDiário
 
