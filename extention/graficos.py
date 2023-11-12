@@ -14,10 +14,10 @@ def ibov():
 
 def ibovCarteiraT():
     
-    rentTotal = rentabilidadeGeral()[3]
+    rentTotal = rentabilidadeGeral()
 
     IBov = Ibov
-    RentTotal = rentTotal
+    RentTotal = rentTotal[3]
 
     plt.plot(IBov, '', color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Carteira Total')
@@ -26,10 +26,10 @@ def ibovCarteiraT():
     plt.show()
 
 def ibovPrivado():
-    rentPrivado = rentabilidadeGeral()[2]
+    rentPrivado = rentabilidadeGeral()
 
     IBov = Ibov
-    RentTotal = rentPrivado
+    RentTotal = rentPrivado[2]
 
     plt.plot(IBov, '', color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Privado')
@@ -38,10 +38,10 @@ def ibovPrivado():
     plt.show()
 
 def ibovPublico():
-    rentPublico = rentabilidadeGeral()[1]
+    rentPublico = rentabilidadeGeral()
 
     IBov = Ibov
-    RentTotal = rentPublico
+    RentTotal = rentPublico[1]
 
     plt.plot(IBov, '', color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Publico')
@@ -50,9 +50,9 @@ def ibovPublico():
     plt.show()
 
 def cdiCarteiraTotal():
-    rentTotal = rentabilidadeGeral()[3]
+    rentTotal = rentabilidadeGeral()
 
-    RentTotal = rentTotal
+    RentTotal = rentTotal[3]
     cdi = Cdi
     plt.plot(cdi, '', color='r', label='CDI')
     plt.plot(RentTotal, color='b', label='Carteira Total')
@@ -74,8 +74,6 @@ def main2():
     print('CDI vs Carteira Total')
     cdiCarteiraTotal()
     print('Ibov vs Carteira Privada')
-    ibovPrivado()
-    print('Ibov vs Privado')
     ibovPrivado()
     
 

@@ -24,7 +24,7 @@ def carteiraPrivada():
 
     rendimentoDiario = rdiario1*pAt1 + rdiario2*pAt2
 
-    return rentabilidade1, rentabilidade2, rentabilidadeG1, rendimentoDiario
+    return rentabilidade1, rentabilidade2, rentabilidadeG1, rendimentoDiario,pAt1, pAt2
 
 
 def carteiraPublica():

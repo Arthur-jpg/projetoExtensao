@@ -71,8 +71,12 @@ def rentabilidade():
     print()
     print(f'O valor final do investimento é de: R${round(aporte*rentGeral+aporte, 2)}')
 
+def beta():
+    
+
 def grafico():
     main2()
+
 
 
 def main():
