@@ -54,4 +54,14 @@ def betaPrivado():
     beta2 = beta[0][1]
     return beta2
 
+def betaTotal():
+    beta1 = betaPublico()
+
+    beta2 = betaPrivado()
+
+    betaTotal = (beta1 + beta2)/2
+    return betaTotal
+
+betaTotal()
 betaPrivado()
+betaPublico()

@@ -2,6 +2,7 @@ from sharpe import variaveis
 import time
 from rentabilidade import rentabilidadeGeral, carteiraPrivada, carteiraPublica
 from graficos import main2
+from beta import betaPrivado, betaPublico, betaTotal
 
 
 while True:
@@ -72,7 +73,29 @@ def rentabilidade():
     print(f'O valor final do investimento é de: R${round(aporte*rentGeral+aporte, 2)}')
 
 def beta():
+    betaA1 = betaPrivado()
+    betaA2 = betaPublico()
     
+    betaTotal1 = betaTotal()
+
+
+    print(f'O Beta da carteira privada é de: {betaA1} ')
+    print(f'O Beta da carteira pública é de: {betaA2} ')
+    print(f'O Beta total da carteira é de: {betaTotal1} ')
+    print()
+
+
+    if betaA1 or betaA2 < 0:
+        print('O beta da carteira é menor que Zero.')
+        print('Isso quer dizer que a carteira tem o movimento contrário do mercado')
+        print()
+    elif betaA1 or betaA2 > 0 and betaA1 or betaA2 < 1 :
+        print('O beta da carteira é maior que Zero e maior que Um.')
+        print('Isso quer dizer que a carteira é de baixo risco, pois varia menos que o mercado')
+        print()  
+    elif  betaA1 or betaA2 > 1:     
+        print('O beta da carteira é maior que Um.')
+        print('Isso quer dizer que a carteira é de alto risco uma vez que varia mais que o mercado')  
 
 def grafico():
     main2()
@@ -86,10 +109,19 @@ def main():
     sharpe()
     time.sleep(2)
     print('-'*60)
+
+    print('COEFICIENTE BETA')
+    print()
+    beta()
+    time.sleep(2)
+    print('-'*60)
+
     print('RENTABILIDADE')
     print()
     rentabilidade()
+    time.sleep(2)
     print('-'*60)
+
     grafico()
 
 main()
