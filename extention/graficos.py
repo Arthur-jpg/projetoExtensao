@@ -1,30 +1,74 @@
 
 import matplotlib.pyplot as plt
 from privados import ibov, cdb1, petr36
+from rentabilidade import rentabilidadeGeral
 
-def comp3():
-    Ibov = ibov()[3]
-    Cdb = cdb1()[3]
-    Petr36 = petr36()[3]
-
-    plt.plot(Ibov, '', color='g', label='IBOV')
-    plt.plot(Cdb, '', color='r', label='CDB')
-    plt.plot(Petr36, color='b', label='PETR36')
-    plt.title('Ibov vs CDB vs Petr36')
+Ibov = ibov()[3]
+Cdi = cdb1()[3]
+def ibov():
+    IBov = Ibov
+    plt.plot(IBov, '', color='g', label='IBOV')
+    plt.title('Ibov')
     plt.legend()
     plt.show()
 
-def comp2():
-    Cdb = cdb1()[3]
-    Petr36 = petr36()[3]
+def ibovCarteiraT():
+    
+    rentTotal = rentabilidadeGeral()[3]
 
-    plt.plot(Cdb, '', color='r', label='CDB')
-    plt.plot(Petr36, color='b', label='PETR36')
-    plt.title('Ibov vs CDB vs Petr36')
+    IBov = Ibov
+    RentTotal = rentTotal
+
+    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(RentTotal, color='b', label='Carteira Total')
+    plt.title('Ibov vs Carteira Total')
     plt.legend()
     plt.show()
+
+def ibovPrivado():
+    rentPrivado = rentabilidadeGeral()[2]
+
+    IBov = Ibov
+    RentTotal = rentPrivado
+
+    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(RentTotal, color='b', label='Privado')
+    plt.title('Ibov vs Carteira Privada')
+    plt.legend()
+    plt.show()
+
+def ibovPublico():
+    rentPublico = rentabilidadeGeral()[1]
+
+    IBov = Ibov
+    RentTotal = rentPublico
+
+    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(RentTotal, color='b', label='Publico')
+    plt.title('Ibov vs publica')
+    plt.legend()
+    plt.show()
+
+def cdiCarteiraTotal():
+    rentTotal = rentabilidadeGeral()[3]
+
+    RentTotal = rentTotal
+    cdi = Cdi
+    plt.plot(cdi, '', color='r', label='CDI')
+    plt.plot(RentTotal, color='b', label='Carteira Total')
+    plt.title('CDI vs Carteira Total')
+    plt.legend()
+    plt.show()
+
+
+
+
 
 def main():
-    comp3()
-    comp2()
+    ibov()
+    ibovCarteiraT()
+    cdiCarteiraTotal()
+    ibovPrivado()
+    ibovPrivado()
 
+main()

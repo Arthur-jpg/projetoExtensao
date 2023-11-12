@@ -126,8 +126,6 @@ def variaveis():
     ativo10 = escolherMenorp()[2]
     ativo20 = escolherMenorp()[3]
 
-
-
     alocacaoAt1 = alocacao
     alocacaoAt2 = 1 - alocacao
     alocacaoAt10 = alocacao2
@@ -139,7 +137,7 @@ def variaveis():
 
 
 
-
+variaveis()
 
 
   
