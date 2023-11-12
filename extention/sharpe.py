@@ -112,10 +112,19 @@ def main():
     print(f'O índice de sharp dos ativos de natureza pública {round(sharpe2, 5)}')
     print(f'O primeiro ativo {ativo10} com {round(100* alocacao2, 2)}% de alocação')
     print(f'O segundo ativo {ativo20} com alocação de {round(100*(1-alocacao2), 2)}%')
+
+    alocacaoAt1 = alocacao
+    alocacaoAt2 = 1 - alocacao
+    alocacaoAt10 = alocacao2
+    alocacaoAt20 = 1 - alocacao2
+
+    return alocacaoAt1, alocacaoAt2, alocacaoAt10, alocacaoAt20
+
+
     
     
 
-main()
+
 
 
 

@@ -44,7 +44,11 @@ def cdb1():
     media = statistics.mean(cdb)
     desvPad = statistics.stdev(cdb)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, cdb
+    pu = planilha['puCdb'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, cdb, rentabilidade
+
 
 
 
@@ -55,7 +59,13 @@ def petr36():
     media = statistics.mean(petr36)
     desvPad = statistics.stdev(petr36)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, petr36
+    pu = planilha['puPet'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+
+    return media, coefVar, desvPad, petr36, rentabilidade
+
+
 
 def Cpld26():
     Cpld26 = planilha['CPLD26'].str.replace(',', '.')
@@ -63,7 +73,11 @@ def Cpld26():
     media = statistics.mean(Cpld26)
     desvPad = statistics.stdev(Cpld26)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Cpld26
+    pu = planilha['puCp'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Cpld26, rentabilidade
+
 
 
 def Taee26():
@@ -72,7 +86,12 @@ def Taee26():
     media = statistics.mean(Taee26)
     desvPad = statistics.stdev(Taee26)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Taee26
+    pu = planilha['puTae'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Taee26, rentabilidade
+
+
 
 def Itsa24():
     Itsa24 = planilha['ITSA24'].str.replace(',', '.')
@@ -80,7 +99,11 @@ def Itsa24():
     media = statistics.mean(Itsa24)
     desvPad = statistics.stdev(Itsa24)
     coefVar = desvPad/media
-    return media, coefVar, desvPad, Itsa24
+    pu = planilha['puIt'].str.replace(',', '.')
+    pu = pu.astype(float)
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    return media, coefVar, desvPad, Itsa24, rentabilidade
+
 
 # a função contaMenores() foi usada para localizar os dois menores coeficientes de variação entre os ativos selecionados
 def contaMenores():

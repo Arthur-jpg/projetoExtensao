@@ -43,7 +43,7 @@ def Selic2026():
 
     # a rentabilidade foi calculada com a diferença entre o preço final e o preço incial em termos percentuais
     rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0]
-
+    
     #  todos os dados calculados foram exportados com o 'return' para poderem ser usados em outras funções
     return media, coefVar, desvPad, Selic2026, rentabilidade
 
@@ -61,8 +61,9 @@ def Selic2028():
     coefVar = desvPad/media
     pu = planilha['puSelic28'].str.replace(',', '.')
     pu = pu.astype(float)
-    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0]
     return media, coefVar, desvPad, Selic2028, rentabilidade
+
 
 
 
@@ -100,7 +101,6 @@ def Ipca2026():
     pu = planilha['puIpca26'].str.replace(',', '.')
     pu = pu.astype(float)
     rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
-    print(rentabilidade)
     return media, coefVar, desvPad, Ipca2026, rentabilidade
 
 
