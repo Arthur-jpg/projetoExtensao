@@ -75,5 +75,7 @@ def main2():
     cdiCarteiraTotal()
     print('Ibov vs Carteira Privada')
     ibovPrivado()
+    print('Ibov vs Carteira Pública')
+    ibovPublico()
     
 

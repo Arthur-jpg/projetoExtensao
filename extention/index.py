@@ -15,7 +15,7 @@ while True:
     
     
    
-print(inp)
+print(f'R${inp}')
     
 
 def sharpe():
@@ -85,17 +85,21 @@ def beta():
     print()
 
 
-    if betaA1 or betaA2 < 0:
+    if betaTotal1 < 0:
         print('O beta da carteira é menor que Zero.')
         print('Isso quer dizer que a carteira tem o movimento contrário do mercado')
         print()
-    elif betaA1 or betaA2 > 0 and betaA1 or betaA2 < 1 :
+    elif betaTotal1 > 0 and betaTotal1 < 1 :
         print('O beta da carteira é maior que Zero e maior que Um.')
         print('Isso quer dizer que a carteira é de baixo risco, pois varia menos que o mercado')
         print()  
-    elif  betaA1 or betaA2 > 1:     
+    elif  betaTotal1 > 1:     
         print('O beta da carteira é maior que Um.')
         print('Isso quer dizer que a carteira é de alto risco uma vez que varia mais que o mercado')  
+    else:
+        print('Algo deu errado')
+
+def 
 
 def grafico():
     main2()
