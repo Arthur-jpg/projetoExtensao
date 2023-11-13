@@ -39,20 +39,31 @@ def ibov():
 
 # as demais funções de ativos abaixo seguem a mesma estrutura do comentado acima
 def cdb1():
+    # foi guardado a serie de dados do CDB  em uma variável para posteriormente tratarmos esses dados
+    # além disso, foi necessário substituir as ',' com '.' para ser possível tratar os dados
     cdb = planilha['CDB'].str.replace(',', '.')
+    # para poder tratar os dados como números, foram transformados em float
     cdb = cdb.astype(float)
+    # usando a biblioteca statistics, foi calculado a média dos dados 
     media = statistics.mean(cdb)
+    # usando a biblioteca statistics, foi calculado o desvio padrão amostral dos dados
     desvPad = statistics.stdev(cdb)
+    # foi calculado o coeficiente de variação com a formula que foi ensidada
     coefVar = desvPad/media
+    ## foi guardado a serie de dados do CDB  em uma variável para posteriormente tratarmos esses dados
+    # além disso, foi necessário substituir as ',' com '.' para ser possível tratar os dados
     pu = planilha['puCdb'].str.replace(',', '.')
+    # para poder tratar os dados como números, foram transformados em float
     pu = pu.astype(float)
-    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0] 
+    # calculo de rentabilidade do título
+    rentabilidade = (pu.iloc[-1]-pu.iloc[0])/pu.iloc[0]
+    #  todos os dados calculados foram exportados com o 'return' para poderem ser usados em outras funções 
     return media, coefVar, desvPad, cdb, rentabilidade
 
 
 
 
-
+# as demais funções de ativos abaixo seguem a mesma estrutura do comentado acima
 def petr36():
     petr36 = planilha['PETR36'].str.replace(',', '.')
     petr36 = petr36.astype(float)

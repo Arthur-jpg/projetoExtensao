@@ -8,7 +8,7 @@ from treynor import treynor
 import pyfiglet as pfg
 
 # foi feito um título com estilo do pyfiglet, a sintax usada foi a da função da biblioteca importada
-titulo = pfg.figlet_format('Calculadora de Carteiras De Investimetno', font='Slant')
+titulo = pfg.figlet_format('Carteira De Investimento', font='Slant')
 # para que o título apareça é necessário printar ele
 print(titulo)
 
@@ -143,41 +143,61 @@ def Treynor():
     
 # foi criado uma função grafico para gerar os gráficos requisitados
 def grafico():
+    # foi retornado a função main2() retorna os gráficos
     main2()
 
 
 # foi feita uma função main (função principal) para poder rodar todas as funções acima na ordem necessária
 def main():
+    # foi criado um divisor para questão de estética
     print('-'*60)
+    # título da função para reconhecimento e estética
     print('SHARPE')
+    # foi criado um print() vazio por questão de esté tica
     print()
+    # retorna a função que calcula o sharpe e mostra os resultados na tela
     sharpe()
-    time.sleep(2)
+    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
+    time.sleep(4)
     print('-'*60)
 
+
+    # título da função para reconhecimento e estética   
     print('COEFICIENTE BETA')
+    # foi criado um print() vazio por questão de esté tica
     print()
+    # retorna a função que calcula o beta e mostra os resultados na tela
     beta()
-    time.sleep(2)
+    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
+    time.sleep(4)
     print('-'*60)
 
+    # título da função para reconhecimento e estética
     print('ÍNDICE DE TREYNOR')
+    # foi criado um print() vazio por questão de esté tica
     print()
+    # retorna a função que calcula o Treynor e mostra os resultados na tela
     Treynor()
-    time.sleep(2)
+    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
+    time.sleep(4)
     print('-'*60)
 
+    # título da função para reconhecimento e estética 
     print('RENTABILIDADE')
+    # foi criado um print() vazio por questão de esté tica
     print()
+    # retorna a função que calcula a rentabilidade e mostra os resultados na tela
     rentabilidade()
-    time.sleep(2)
+    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
+    time.sleep(4)
     print('-'*60)
 
+    # retorna a função que e mostra os gráficos
     grafico()
 
 
 
-
+# convenção 
 if __name__ == '__main__':
     main()
 
