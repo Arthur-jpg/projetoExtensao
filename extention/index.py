@@ -30,7 +30,7 @@ while True:
 # após receber o a porte o programa mostra quanto foi o valor aportado
 print(f'R${inp}')
 
-print('As informações apresentadas a tem como base um ano e meio de dados')
+print('As informações apresentadas a seguir possuem enquanto referência o período base de análise de um ano e meio')
     
 
 # foi criado uma função sharpe para que todos os dados necessários fossem usados para mostrar informações com funções print
@@ -159,8 +159,8 @@ def main():
     print()
     # retorna a função que calcula o sharpe e mostra os resultados na tela
     sharpe()
-    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
-    time.sleep(4)
+    # time.sleep espera 2 segundos para começar a próxima função para não ficar confuso
+    time.sleep(2)
     print('-'*60)
 
 
@@ -170,8 +170,8 @@ def main():
     print()
     # retorna a função que calcula o beta e mostra os resultados na tela
     beta()
-    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
-    time.sleep(4)
+    # time.sleep espera 2 segundos para começar a próxima função para não ficar confuso
+    time.sleep(2)
     print('-'*60)
 
     # título da função para reconhecimento e estética
@@ -180,8 +180,8 @@ def main():
     print()
     # retorna a função que calcula o Treynor e mostra os resultados na tela
     Treynor()
-    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
-    time.sleep(4)
+    # time.sleep espera 2 segundos para começar a próxima função para não ficar confuso
+    time.sleep(2)
     print('-'*60)
 
     # título da função para reconhecimento e estética 
@@ -190,8 +190,8 @@ def main():
     print()
     # retorna a função que calcula a rentabilidade e mostra os resultados na tela
     rentabilidade()
-    # time.sleep espera 4 segundos para começar a próxima função para não ficar confuso
-    time.sleep(4)
+    # time.sleep espera 2 segundos para começar a próxima função para não ficar confuso
+    time.sleep(2)
     print('-'*60)
 
     # retorna a função que e mostra os gráficos
