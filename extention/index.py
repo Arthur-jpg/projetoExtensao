@@ -5,7 +5,10 @@ from rentabilidade import rentabilidadeGeral, carteiraPrivada, carteiraPublica
 from graficos import main2
 from beta import betaPrivado, betaPublico, betaTotal
 from treynor import treynor
+import pyfiglet as pfg
 
+titulo = pfg.figlet_format('Calculadora de Carteiras De Investimetno', font='Slant')
+print(titulo)
 
 # foi feito um while loop para testar o input de aporte
 while True:
