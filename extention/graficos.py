@@ -84,7 +84,7 @@ def ibovPublico():
     plt.plot(IBov, color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Publico')
     # a função title mostra o título do gráfico
-    plt.title('IBOV vs Publica')
+    plt.title('IBOV vs Pública')
     # a função legend mostra a legenda do gráfico
     plt.legend()
     # a função show mostra o gráfico
