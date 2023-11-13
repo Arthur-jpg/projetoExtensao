@@ -37,7 +37,7 @@ def ibov():
 
 
 
-
+# as demais funções de ativos abaixo seguem a mesma estrutura do comentado acima
 def cdb1():
     cdb = planilha['CDB'].str.replace(',', '.')
     cdb = cdb.astype(float)

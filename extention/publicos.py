@@ -52,7 +52,7 @@ def Selic2026():
 
 
 
-
+# as demais funções de ativos abaixo seguem a mesma estrutura do comentado acima
 def Selic2028():
     Selic2028 = planilha['Selic2028'].str.replace(',', '.')
     Selic2028 = Selic2028.astype(float)
