@@ -35,7 +35,7 @@ def ibovCarteiraT():
 
     # as devidas funções necessárias para rodar o gráfico foram postas
     # a função plot, gera o gráfico
-    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(IBov, color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Carteira Total')
     # a função title mostra o título do gráfico
     plt.title('IBOV vs Carteira Total')
@@ -59,7 +59,7 @@ def ibovPrivado():
 
     # as devidas funções necessárias para rodar o gráfico foram postas
     # a função plot, gera o gráfico
-    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(IBov, color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Privado')
     # a função title mostra o título do gráfico
     plt.title('IBOV vs Carteira Privada')
@@ -81,7 +81,7 @@ def ibovPublico():
 
     # as devidas funções necessárias para rodar o gráfico foram postas
     # a função plot, gera o gráfico
-    plt.plot(IBov, '', color='r', label='IBOV')
+    plt.plot(IBov, color='r', label='IBOV')
     plt.plot(RentTotal, color='b', label='Publico')
     # a função title mostra o título do gráfico
     plt.title('IBOV vs Publica')
@@ -100,7 +100,7 @@ def cdiCarteiraTotal():
     cdi = Cdi
     # as devidas funções necessárias para rodar o gráfico foram postas
     # a função plot, gera o gráfico
-    plt.plot(cdi, '', color='r', label='CDI')
+    plt.plot(cdi, color='r', label='CDI')
     plt.plot(RentTotal, color='b', label='Carteira Total')
     #   a função title mostra o título do gráfico
     plt.title('CDI vs Carteira Total')

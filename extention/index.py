@@ -29,6 +29,8 @@ while True:
     
 # após receber o a porte o programa mostra quanto foi o valor aportado
 print(f'R${inp}')
+
+print('As informações apresentadas a tem como base um ano e meio de dados')
     
 
 # foi criado uma função sharpe para que todos os dados necessários fossem usados para mostrar informações com funções print
