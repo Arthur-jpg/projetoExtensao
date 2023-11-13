@@ -7,7 +7,9 @@ from beta import betaPrivado, betaPublico, betaTotal
 from treynor import treynor
 import pyfiglet as pfg
 
+# foi feito um título com estilo do pyfiglet, a sintax usada foi a da função da biblioteca importada
 titulo = pfg.figlet_format('Calculadora de Carteiras De Investimetno', font='Slant')
+# para que o título apareça é necessário printar ele
 print(titulo)
 
 # foi feito um while loop para testar o input de aporte
