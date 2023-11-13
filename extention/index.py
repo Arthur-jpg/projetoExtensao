@@ -102,9 +102,9 @@ def beta():
     betaTotal1 = betaTotal()
 
     # foram criados funções print para mostar os resultados necessários
-    print(f'O Beta da carteira privada é de: {betaA1} ')
-    print(f'O Beta da carteira pública é de: {betaA2} ')
-    print(f'O Beta total da carteira é de: {betaTotal1} ')
+    print(f'O Beta da carteira privada é de: {round(betaA1, 4)} ')
+    print(f'O Beta da carteira pública é de: {round(betaA2, 4)} ')
+    print(f'O Beta total da carteira é de: {round(betaTotal1, 4)} ')
     print()
 
     # foi criado uma relação de if statements para poder testar e saber se o valor é maior, menor ou entre zero e um
@@ -130,7 +130,7 @@ def Treynor():
     treynorr = treynor()
 
     # foi usado uma função print() para mostar o resultado do índice
-    print(f'O índice de Treynor da carteira é igual á {treynorr}')
+    print(f'O índice de Treynor da carteira é igual á {round(treynorr, 4)}')
 
     # foi feito uma relação condicional para demostra como interpretar o índice
     if treynorr > 0:
