@@ -1,4 +1,4 @@
-# projetoExtensao
+# Projeto de Extensão
 
 O seguinte código foi estruturado com o objetivo de tornar possível a formação de uma carteira de investimentos por meio de cálculos e embasamento matemático de
 índices e relações de retorno, tendo em vista um determinado portfólio de ativos à disposição. Acerca disso, destaca-se que para utilizar o código é necessário possuir as
