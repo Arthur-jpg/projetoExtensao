@@ -7,11 +7,10 @@ def treynor():
     rentabilidadeCarteira = rentabilidadeGeral()
     rentabilidadeCarteira = rentabilidadeCarteira[0]
     taxaLivreRisco = cdb1()
-    taxaLivreRisco = taxaLivreRisco[4]
+    taxaLivreRisco = taxaLivreRisco[3]
 
     treynorr = (rentabilidadeCarteira - taxaLivreRisco)/beta
 
     print(treynorr)
     return treynorr
 
-treynor()

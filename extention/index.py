@@ -90,7 +90,7 @@ def beta():
         print('Isso quer dizer que a carteira tem o movimento contrário do mercado')
         print()
     elif betaTotal1 > 0 and betaTotal1 < 1 :
-        print('O beta da carteira é maior que Zero e maior que Um.')
+        print('O beta da carteira é maior que Zero e menor que Um.')
         print('Isso quer dizer que a carteira é de baixo risco, pois varia menos que o mercado')
         print()  
     elif  betaTotal1 > 1:     
